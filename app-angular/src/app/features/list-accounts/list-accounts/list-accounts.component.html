@@ -3,20 +3,18 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Full Name</th>
+          <th scope="col">id</th>
           <th scope="col">User Name</th>
           <th scope="col">Email</th>
-          <th scope="col">Role</th>
+          <th scope="col">Admin</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let account of accounts">
-          <th scope="row">{{account.id}}</th>
-          <td>{{account.name}} {{account.lastName}}</td>
+          <th scope="row">{{account._id}}</th>
           <td>{{account.userName}}</td>
           <td>{{account.email}}</td>
-          <td>{{account.role}}</td>
+          <td>{{account.admin}}</td>
         </tr>
 
       </tbody>

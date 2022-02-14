@@ -58,7 +58,7 @@ export class LoginService {
     }
   }
   getAll() {
-    return this.httpClient.get<any[]>(this.urlLogin);
+    return this.httpClient.get<any>(this.urlLogin+'/admin');
   }
 
 }

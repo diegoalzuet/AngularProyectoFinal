@@ -21,7 +21,7 @@ export class ListAccountsComponent implements OnInit {
   ngOnInit(): void {
      this.loginService.getAll().subscribe(data=>{
        console.log(data);
-      this.accounts = data;
+      this.accounts = data.users;
 
      });
 

@@ -48,3 +48,19 @@ export const loginUsuario = async (req, res) => {
         });
     }
 }
+
+export const getAll = async (req, res) => {
+
+
+    let users = await User.find();
+
+    return res.json({
+        status: "OK",
+        users : users,
+        msg: "Usuarios registrados"        
+    })
+
+   // console.log(users)
+
+    // res.send(REGISTERED_USERS);
+}
