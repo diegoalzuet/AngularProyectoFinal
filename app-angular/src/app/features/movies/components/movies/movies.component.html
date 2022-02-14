@@ -1,0 +1,37 @@
+<!-- <div class="movie-container">
+  <div *ngFor="let movie of movies" class="card" style="width: 18rem;">
+    <img [src]="movie.image.url" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" (click)="showDetail(movie.id)">+ Info</a>
+        <a class="btn btn-dark" (click)="addToCart(movie.id)">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="info-cart-container border-form">
+</div> -->
+
+<div class="movie-container">
+  <mat-card *ngFor="let movie of movies" style="width: 18rem;" class="my-2">
+    <mat-card-header>
+      <mat-card-title>{{movie.title |uppercase}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="movie.image.url" alt="img de movie">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="showDetail(movie.id)">+Info</button>
+      <button mat-raised-button  color="warn" (click)="addToCart(movie)">Add to Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

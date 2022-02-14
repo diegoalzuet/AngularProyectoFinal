@@ -1,0 +1,22 @@
+.movie-container {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .card {
+    margin-bottom: 20px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.info-cart-container{
+  display: flex;
+  justify-content: space-around;
+}
+.border-form{
+  border: 1px solid #C00;;
+}

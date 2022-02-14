@@ -1,0 +1,73 @@
+<!-- <div class="container">
+  <form [formGroup]="loginForm" loginFormrole="form">
+    <fieldset>
+      <p class="text-uppercase"> Login using your account: </p>
+      <div class="form-group">
+        <input type="email" name="username-login" id="username-login" class="form-control input-lg"
+          formControlName="user" placeholder="username">
+      </div>
+      <div class="form-group">
+        <input type="password" name="password-login" id="password-login" class="form-control input-lg"
+          formControlName="password" placeholder="Password">
+      </div>
+      <div>
+        <button type="submit" class="btn btn-dark" [disabled]="loginForm.invalid"
+        (click)="loguear()">Sign In</button>
+      </div>
+
+      <div *ngIf="userControl.invalid && (userControl.dirty || userControl.touched)" class="alert alert-danger">
+        <div *ngIf="userControl.hasError('required')">El nombre es requerido</div>
+        <div *ngIf="userControl.hasError('pattern')">El formato del mail es invalido</div>
+      </div>
+
+      <div *ngIf="passwordControl.invalid && (passwordControl.dirty || passwordControl.touched)"
+        class="alert alert-danger">
+        <div *ngIf="passwordControl.hasError('required')">El password es requerido</div>
+        <div *ngIf="passwordControl.hasError('minlength')">>El password debe ser de 10 o más caracteres</div>
+      </div>
+    </fieldset>
+  </form>
+</div> -->
+
+
+
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+
+  <mat-card-content>
+    <form [formGroup]="loginForm" loginFormrole="form">
+      <fieldset>
+        <p>
+          <mat-form-field>
+            <input type="email" matInput formControlName="username" placeholder="email">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input type="password" matInput formControlName="password" placeholder="Password">
+          </mat-form-field>
+        </p>
+        <div>
+          <a class="link-primary" (click)="goToRegister()">New Account</a>
+        </div>
+
+        <div class="button">
+          <!-- <button mat-raised-button color="warn" (click)="loguear()" [disabled]="loginForm.invalid">Sign In</button> -->
+          <button mat-raised-button color="warn" (click)="submit()" [disabled]="loginForm.invalid">Sign In</button>
+        </div>
+
+        <div *ngIf="userControl.invalid && (userControl.dirty || userControl.touched)" class="alert alert-danger">
+          <div *ngIf="userControl.hasError('required')">El nombre es requerido</div>
+          <div *ngIf="userControl.hasError('pattern')">El formato del mail es invalido</div>
+        </div>
+
+        <div *ngIf="passwordControl.invalid && (passwordControl.dirty || passwordControl.touched)"
+          class="alert alert-danger">
+          <div *ngIf="passwordControl.hasError('required')">El password es requerido</div>
+          <div *ngIf="passwordControl.hasError('minlength')">>El password debe ser de 4 o más caracteres</div>
+        </div>
+      </fieldset>
+    </form>
+
+  </mat-card-content>
+</mat-card>

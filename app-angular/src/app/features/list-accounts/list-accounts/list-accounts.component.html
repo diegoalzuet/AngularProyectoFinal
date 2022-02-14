@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row p-5">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Full Name</th>
+          <th scope="col">User Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of accounts">
+          <th scope="row">{{account.id}}</th>
+          <td>{{account.name}} {{account.lastName}}</td>
+          <td>{{account.userName}}</td>
+          <td>{{account.email}}</td>
+          <td>{{account.role}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
