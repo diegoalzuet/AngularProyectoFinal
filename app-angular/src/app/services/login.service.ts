@@ -46,7 +46,9 @@ export class LoginService {
   }
   isUserLoggedIn() {
     // return this.userName !== '';
-    return this.token !=='';
+    console.log("tokeeeeeeeee" , this.token);
+
+    return (this.token !=='' && this.token !=null);
   }
   getUserInfo(): any {
     return {

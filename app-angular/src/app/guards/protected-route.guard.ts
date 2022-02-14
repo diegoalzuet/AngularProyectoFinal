@@ -18,7 +18,7 @@ export class ProtectedRouteGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
       const isUserLoggedIn = this.loginService.isUserLoggedIn();
-      console.log(isUserLoggedIn);
+      console.log("Logueado" , isUserLoggedIn);
 
       if(!isUserLoggedIn){
         this.router.navigate(['login']);
