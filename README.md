@@ -1,2 +1,1 @@
 # AngularProyectoFinal
-node_modules
